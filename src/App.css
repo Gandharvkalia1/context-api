@@ -1,25 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --color-background: oklch(1 0 0);
-  --color-foreground: oklch(0.145 0 0);
-  --color-card: oklch(1 0 0);
-  --color-card-foreground: oklch(0.145 0 0);
-  --color-popover: oklch(1 0 0);
-  --color-popover-foreground: oklch(0.145 0 0);
-  --color-primary: oklch(0.205 0 0);
-  --color-primary-foreground: oklch(0.985 0 0);
-  --color-secondary: oklch(0.97 0 0);
-  --color-secondary-foreground: oklch(0.205 0 0);
-  --color-muted: oklch(0.97 0 0);
-  --color-muted-foreground: oklch(0.556 0 0);
-  --color-accent: oklch(0.97 0 0);
-  --color-accent-foreground: oklch(0.205 0 0);
+  --color-background: #faf8ff;
+  --color-foreground: #131b2e;
+  --color-card: #ffffff;
+  --color-card-foreground: #131b2e;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #131b2e;
+  --color-primary: #3525cd;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #f2f3ff;
+  --color-secondary-foreground: #131b2e;
+  --color-muted: #f2f3ff;
+  --color-muted-foreground: #464555;
+  --color-accent: #eaedff;
+  --color-accent-foreground: #131b2e;
+  --color-surface: #faf8ff;
+  --color-surface-container: #eaedff;
+  --color-surface-container-high: #e2e7ff;
+  --color-surface-container-highest: #dae2fd;
+  --color-surface-container-low: #f2f3ff;
+  --color-on-surface: #131b2e;
+  --color-on-surface-variant: #464555;
+  --color-on-background: #131b2e;
+  --color-outline: #777587;
+  --color-outline-variant: #c7c4d8;
+  --color-inverse-surface: #283044;
   --color-destructive: oklch(0.577 0.245 27.325);
   --color-destructive-foreground: oklch(0.985 0 0);
-  --color-border: oklch(0.922 0 0);
-  --color-input: oklch(0.922 0 0);
-  --color-ring: oklch(0.708 0 0);
+  --color-border: #c7c4d8;
+  --color-input: #c7c4d8;
+  --color-ring: #3525cd;
   --radius: 0.625rem;
 }
 
@@ -37,9 +49,41 @@ body {
   min-height: 100vh;
   background-color: var(--color-background);
   color: var(--color-foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
 }
 
 #root {
   min-height: 100vh;
+}
+
+.dashboard-brand {
+  background:
+    radial-gradient(circle at top left, rgba(234, 237, 255, 0.95), transparent 30%),
+    radial-gradient(circle at 85% 20%, rgba(53, 37, 205, 0.1), transparent 25%),
+    linear-gradient(180deg, #faf8ff 0%, #f2f3ff 100%);
+}
+
+.dashboard-grid {
+  background-image:
+    linear-gradient(rgba(199, 196, 216, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(199, 196, 216, 0.3) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent 92%);
+}
+
+.dashboard-glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(24px);
+}
+
+.dashboard-shell {
+  color: #131b2e;
+}
+
+.dashboard-headline {
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+}
+
+.dashboard-glow {
+  background: radial-gradient(circle, rgba(53, 37, 205, 0.12) 0%, rgba(53, 37, 205, 0) 70%);
 }
